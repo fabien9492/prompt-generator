@@ -21,5 +21,5 @@ function generatePrompt() {
   prompt += `Merci !\n`;
   
   // Affichage du prompt dans l'interface
-  document.querySelector('#result p').textContent = prompt;
+  document.querySelector('#result p').textContent = prompt; 
 }
