@@ -3,57 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Générateur de Prompts</title>
+  <title>Générateur de Prompt</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Générateur de Prompts Vidéo</h1>
-    <div class="form-group">
-      <label for="site">Lien du site :</label>
-      <input type="text" id="site" placeholder="Entrez le lien du site">
-    </div>
-    <div class="form-group">
-      <label for="search">Autoriser la recherche complémentaire :</label>
-      <select id="search">
-        <option value="Oui">Oui</option>
-        <option value="Non">Non</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="tone">Ton souhaité :</label>
-      <select id="tone">
-        <option value="Professionnel">Professionnel</option>
-        <option value="Humoristique">Humoristique</option>
-        <option value="Motivant">Motivant</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="audience">Public cible :</label>
-      <input type="text" id="audience" placeholder="Exemple : jeunes adultes, entrepreneurs">
-    </div>
-    <div class="form-group">
-      <label for="objective">Objectif de la vidéo :</label>
-      <input type="text" id="objective" placeholder="Exemple : promouvoir un produit">
-    </div>
-    <div class="form-group">
-      <label for="duration">Durée de la vidéo :</label>
-      <input type="text" id="duration" placeholder="Exemple : 30 secondes">
-    </div>
-    <div class="form-group">
-      <label for="platform">Plateformes cibles :</label>
-      <input type="text" id="platform" placeholder="Exemple : Instagram, YouTube">
-    </div>
-    <div class="form-group">
-      <label for="keywords">Mots-clés à inclure :</label>
-      <input type="text" id="keywords" placeholder="Séparez les mots-clés par des virgules">
-    </div>
-    <button onclick="generatePrompt()">Générer le prompt</button>
-    <div id="result">
-      <p></p>
-      <button id="copyAndOpen">Copier et ouvrir ChatGPT</button>
-    </div>
+  <h1>Générateur de Prompt Vidéo</h1>
+  
+  <form id="promptForm">
+    <!-- Lien du site -->
+    <label for="site">Lien du site :</label>
+    <input type="url" id="site" name="site" placeholder="https://example.com" required><br><br>
+
+    <!-- Autorisation de recherche complémentaire -->
+    <label for="search">Autorisation de recherche complémentaire :</label>
+    <select id="search" name="search">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select><br><br>
+
+    <!-- Ton souhaité -->
+    <label for="tone">Ton souhaité :</label>
+    <select id="tone" name="tone">
+      <option value="Professionnel">Professionnel</option>
+      <option value="Humoristique">Humoristique</option>
+      <option value="Informel">Informel</option>
+      <option value="Inspirant">Inspirant</option>
+      <option value="Sérieux">Sérieux</option>
+    </select><br><br>
+
+    <!-- Public cible -->
+    <label for="audience">Public cible :</label>
+    <select id="audience" name="audience">
+      <option value="Jeunes adultes">Jeunes adultes</option>
+      <option value="Professionnels">Professionnels</option>
+      <option value="Adolescents">Adolescents</option>
+      <option value="Enfants">Enfants</option>
+      <option value="Personnes âgées">Personnes âgées</option>
+    </select><br><br>
+
+    <!-- Objectif de la vidéo -->
+    <label for="objective">Objectif de la vidéo :</label>
+    <select id="objective" name="objective">
+      <option value="Promouvoir un produit">Promouvoir un produit</option>
+      <option value="Informer">Informer</option>
+      <option value="Divertir">Divertir</option>
+      <option value="Éduquer">Éduquer</option>
+      <option value="Inspirer">Inspirer</option>
+    </select><br><br>
+
+    <!-- Durée de la vidéo -->
+    <label for="duration">Durée de la vidéo :</label>
+    <input type="text" id="duration" name="duration" placeholder="Ex. : 30 secondes"><br><br>
+
+    <button type="button" onclick="generatePrompt()">Générer le prompt</button>
+  </form>
+
+  <div id="result">
+    <h2>Votre prompt :</h2>
+    <p></p>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
