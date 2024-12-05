@@ -7,6 +7,7 @@ function generatePrompt() {
   const objective = document.getElementById('objective').value;
   const duration = document.getElementById('duration').value;
   const platform = document.getElementById('platform').value;
+   const cles = document.getElementById('cles').value;
 
   // Construction du prompt
   let prompt = `Peux tu me générer un script vidéo curation avec voix off basée sur l'article suivant : ${site} :\n\n`;
@@ -16,6 +17,7 @@ function generatePrompt() {
   prompt += `Le script de la vidéo doit durée : ${duration}\n`;
   prompt += `Je pense publier ma vidéo sur les plateformes suivantes : ${platform}\n`;
   prompt += `Autorisation de recherche complémentaire sur d'autres sites pour étoffer le script : ${search}`;
+  prompt += `il faudrait que mon script contienne absolument les mots clés suivants : ${cles}`;
   prompt += `Merci !\n`;
   
   // Affichage du prompt dans l'interface
