@@ -1,3 +1,4 @@
+// Fonction pour générer le prompt
 function generatePrompt() {
   const site = document.getElementById('site').value;
   const search = document.getElementById('search').value;
@@ -18,9 +19,23 @@ function generatePrompt() {
   prompt += `Autorisation de recherche complémentaire : ${search}\n`;
 
   if (keywords) {
-    prompt += `Mots-clés : ${keywords}\n`;  // Ajout des mots-clés dans le prompt
+    prompt += `Mots-clés : ${keywords}\n`;
   }
 
-  // Affichage du prompt généré
   document.querySelector('#result p').textContent = prompt;
 }
+
+// Fonction pour copier le texte et ouvrir ChatGPT
+document.getElementById('copyAndOpen').addEventListener('click', function () {
+  const resultText = document.querySelector('#result p').textContent;
+
+  navigator.clipboard.writeText(resultText)
+    .then(() => {
+      window.open('https://chat.openai.com/', '_blank');
+      alert("Le texte a été copié ! Collez-le dans l'onglet ChatGPT.");
+    })
+    .catch(err => {
+      console.error('Erreur lors de la copie :', err);
+    });
+});
+
