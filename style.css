@@ -17,6 +17,7 @@ h1 {
   color: #007BFF;
   font-size: 2.5rem;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 /* Formulaire */
@@ -31,7 +32,7 @@ form {
 }
 
 label {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 5px;
   display: block;
@@ -58,6 +59,7 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 1.2rem;
 }
 
 button:hover {
@@ -78,6 +80,7 @@ button:hover {
 
 #result h2 {
   color: #333;
+  font-size: 1.5rem;
 }
 
 #result p {
@@ -85,4 +88,5 @@ button:hover {
   white-space: pre-wrap;
   word-wrap: break-word;
   color: #555;
+  line-height: 1.6;
 }
