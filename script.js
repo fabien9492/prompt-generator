@@ -16,8 +16,8 @@ function generatePrompt() {
   prompt += `L'objectif de ma vidéo serait : ${objective}\n`;
   prompt += `Le script de la vidéo doit durée : ${duration}\n`;
   prompt += `Je pense publier ma vidéo sur les plateformes suivantes : ${platform}\n`;
-  prompt += `Autorisation de recherche complémentaire sur d'autres sites pour étoffer le script : ${search}`;
-  prompt += `il faudrait que mon script contienne absolument les mots clés suivants : ${cles}`;
+  prompt += `Autorisation de recherche complémentaire sur d'autres sites pour étoffer le script : ${search}\n`;
+  prompt += `il faudrait que mon script contienne absolument les mots clés suivants : ${cles}\n`;
   prompt += `Merci !\n`;
   
   // Affichage du prompt dans l'interface
