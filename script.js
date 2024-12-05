@@ -9,14 +9,15 @@ function generatePrompt() {
   const platform = document.getElementById('platform').value;
 
   // Construction du prompt
-  let prompt = `Voici le prompt pour générer une vidéo basée sur le site ${site} :\n\n`;
-  prompt += `Ton souhaité : ${tone}\n`;
-  prompt += `Public cible : ${audience}\n`;
-  prompt += `Objectif de la vidéo : ${objective}\n`;
-  prompt += `Durée de la vidéo : ${duration}\n`;
-  prompt += `Plateformes cibles : ${platform}\n`;
-  prompt += `Autorisation de recherche complémentaire : ${search}`;
-
+  let prompt = `Peux tu me générer un script vidéo curation avec voix off basée sur l'article suivant : ${site} :\n\n`;
+  prompt += `Il faudrait que le script adopte ton ${tone}\n`;
+  prompt += `Pour mon script je vise le public suivant : ${audience}\n`;
+  prompt += `L'objectif de ma vidéo serait : ${objective}\n`;
+  prompt += `Le script de la vidéo doit durée : ${duration}\n`;
+  prompt += `Je pense publier ma vidéo sur les plateformes suivantes : ${platform}\n`;
+  prompt += `Autorisation de recherche complémentaire sur d'autres sites pour étoffer le script : ${search}`;
+  prompt += `Merci !\n`;
+  
   // Affichage du prompt dans l'interface
   document.querySelector('#result p').textContent = prompt;
 }
