@@ -2,21 +2,25 @@ function generatePrompt() {
   const site = document.getElementById('site').value;
   const search = document.getElementById('search').value;
   const tone = document.getElementById('tone').value;
-  const duration = document.getElementById('duration').value;
   const audience = document.getElementById('audience').value;
   const objective = document.getElementById('objective').value;
+  const duration = document.getElementById('duration').value;
   const platform = document.getElementById('platform').value;
+  const keywords = document.getElementById('keywords').value.trim();
 
-  const prompt = `
-Je souhaite un script pour une vidéo destinée aux réseaux sociaux.
-- Lien du site : ${site}
-- Autorisation de recherche complémentaire : ${search}
-- Ton souhaité : ${tone}
-- Durée de la vidéo : ${duration}
-- Public cible : ${audience}
-- Objectif de la vidéo : ${objective}
-- Plateformes prévues : ${platform}
-  `;
+  let prompt = `Voici le prompt pour générer une vidéo basée sur le site ${site} :\n\n`;
 
-  document.querySelector('#result p').innerText = prompt;
+  prompt += `Ton souhaité : ${tone}\n`;
+  prompt += `Public cible : ${audience}\n`;
+  prompt += `Objectif de la vidéo : ${objective}\n`;
+  prompt += `Durée de la vidéo : ${duration}\n`;
+  prompt += `Plateformes cibles : ${platform}\n`;
+  prompt += `Autorisation de recherche complémentaire : ${search}\n`;
+
+  if (keywords) {
+    prompt += `Mots-clés : ${keywords}\n`;  // Ajout des mots-clés dans le prompt
+  }
+
+  // Affichage du prompt généré
+  document.querySelector('#result p').textContent = prompt;
 }
