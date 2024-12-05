@@ -20,4 +20,3 @@ Je souhaite un script pour une vidéo destinée aux réseaux sociaux.
 
   document.querySelector('#result p').innerText = prompt;
 }
-
