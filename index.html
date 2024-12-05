@@ -8,28 +8,54 @@
 </head>
 <body>
   <h1>Générateur de Prompt Vidéo</h1>
+  
   <form id="promptForm">
+    <!-- Lien du site -->
     <label for="site">Lien du site :</label>
     <input type="url" id="site" name="site" required><br><br>
 
+    <!-- Autorisation de recherche complémentaire -->
     <label for="search">Autorisation de recherche complémentaire :</label>
     <select id="search" name="search">
       <option value="Oui">Oui</option>
       <option value="Non">Non</option>
     </select><br><br>
 
+    <!-- Ton souhaité -->
     <label for="tone">Ton souhaité :</label>
-    <input type="text" id="tone" name="tone" placeholder="Ex. : professionnel, humoristique"><br><br>
+    <select id="tone" name="tone">
+      <option value="Professionnel">Professionnel</option>
+      <option value="Humoristique">Humoristique</option>
+      <option value="Informel">Informel</option>
+      <option value="Inspirant">Inspirant</option>
+      <option value="Sérieux">Sérieux</option>
+    </select><br><br>
 
+    <!-- Public cible -->
+    <label for="audience">Public cible :</label>
+    <select id="audience" name="audience">
+      <option value="Jeunes adultes">Jeunes adultes</option>
+      <option value="Professionnels">Professionnels</option>
+      <option value="Adolescents">Adolescents</option>
+      <option value="Enfants">Enfants</option>
+      <option value="Personnes âgées">Personnes âgées</option>
+    </select><br><br>
+
+    <!-- Objectif de la vidéo -->
+    <label for="objective">Objectif de la vidéo :</label>
+    <select id="objective" name="objective">
+      <option value="Promouvoir un produit">Promouvoir un produit</option>
+      <option value="Informer">Informer</option>
+      <option value="Divertir">Divertir</option>
+      <option value="Éduquer">Éduquer</option>
+      <option value="Inspirez">Inspirez</option>
+    </select><br><br>
+
+    <!-- Durée de la vidéo -->
     <label for="duration">Durée de la vidéo :</label>
     <input type="text" id="duration" name="duration" placeholder="Ex. : 30 secondes"><br><br>
 
-    <label for="audience">Public cible :</label>
-    <input type="text" id="audience" name="audience" placeholder="Ex. : jeunes adultes"><br><br>
-
-    <label for="objective">Objectif de la vidéo :</label>
-    <input type="text" id="objective" name="objective" placeholder="Ex. : promouvoir un produit"><br><br>
-
+    <!-- Plateformes cibles -->
     <label for="platform">Plateformes cibles :</label>
     <input type="text" id="platform" name="platform" placeholder="Ex. : TikTok, Instagram"><br><br>
 
